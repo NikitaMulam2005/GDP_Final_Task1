@@ -1,0 +1,85 @@
+<div class="line">
+</div>
+<div class="nav3">
+  <div class="content1">
+    <h2 class="head1">Find Meals For Your Ingridient</h2>
+    <p class="para1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi fuga sed repellat, ullam dicta
+      obcaecati maxime magnam dolor dolorem? Velit, natus nisi. Modi ab possimus aliquid minima quas aliquam
+      aspernatur!</p>
+    <div class="btn">
+      <button class="btn1"><a href=/explore class="submit">Explore Latest</a></button>
+      <button class="btn2">Show Random</button>
+    </div>
+  </div>
+  <div class="nav2">
+    <div class="content">
+    </div>
+    <div class="menu">
+      <img src="/img/food1.png" class="img1" alt="menu1" height="400px" width="600vw">
+    </div>
+  </div>
+</div>
+<div class="main1">
+  <div class="head">
+    <h2 class="head2">Categories</h2>
+    <a href="/categories" class="linkcat">
+      <div class="categry_image">
+        <img src="/img/button.jpg" alt="imge" class="btnn">
+    <h6 class="head3">View All Categories</h6>
+  </div>
+    </a>
+  </div>
+  <span class=" col d-flex align-items-center justify-content-center categ">
+    <div class="category_Breakfast">
+      <img src="/img/download.jpg" class="Breakfast" alt="im1">
+      <h6 class="head4">Breakfast</h6>
+    </div>
+    <div class="category_NonVeg">
+      <img src="/img/OIP ().jpg" class="NonVeg" alt="im2">
+      <h6 class="head5">NonVeg</h6>
+    </div>
+    <div class="category_Desserts">
+      <img src="/img/OIP (10).jpg" class="Desserts" alt="im3">
+      <h6 class="head6">Desserts</h6>
+    </div>
+    <div class="category_Dinner">
+      <img src="/img/download (1).jpg" class="Dinner" alt="im4">
+      <h6 class="head7">Lunch & Dinner</h6>
+    </div>
+    <div class="category_Starters">
+      <img src="/img/starter.jpg" class="Starters" alt="im5">
+      <h6 class="head13">Starters</h6>
+    </div>
+  </span>
+</div>
+<div class="main2">
+  <div class="head_2">
+    <div class="lgo">
+
+      <h2 class="head8">Simple And Tasty Recipes</h2>
+      <a href="/explore" class="linkrec">
+        <div class="categry_rec">
+          <img src="/img/button.jpg" alt="imge" class="btnn1" id="btn">
+      <h6 class="head9">View More</h6>
+    </div>
+      </a>
+
+    </div>
+    <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing consequatur iste excepturi consequuntur.</p>
+  </div>
+  <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-25">
+
+    <% if(food != '') { %>
+      <% food.latest.forEach(function(recipe, index){ %>
+      <a href="/recipe/<%= recipe._id %>" class="col text-center category__link">
+        <div class="category__img">
+          <img src="uploads/<%= recipe.image %>" alt="<%= recipe.name %>" loading="lazy" class="cimg">
+        </div>
+        <div class="pt-1"><%= recipe.name %></div>
+      </a>
+      <% }) %>
+    <% } else { %>
+      <p>No items found.</p>
+    <% } %>
+  </div>
+ 

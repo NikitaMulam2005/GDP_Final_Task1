@@ -1,0 +1,21 @@
+<h2> Explore Categories</h2>
+<br>
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Library</li>
+  </ol>
+</nav>
+<br>
+<div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 mb-3">
+<% if(categories != ''){ %>
+    <% categories.forEach(function(category , index){ %>
+     <a href="/categories/<%-category.name %>" class="linkcat">
+      <div class="category_<%- category.name %>">
+        <img src="img/<%- category.image %>" alt="reci_<%- category.name %>" class="<%- category.name %>" >
+        <h6 class="pt-1"><%- category.name %></h6>
+      </div>
+     </a>
+   <% }) %>
+<% } %>
+</div>
